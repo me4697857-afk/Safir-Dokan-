@@ -1,1 +1,182 @@
-# Safir-Dokan-
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SD | ماكينات عد النقود والخزن الحديدية</title>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#09090a;--panel:#141416;--line:#2a2820;--gold:#d9a93a;--gold2:#f2d27a;--ink:#f4ecda;--mute:#9a9484;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Readex Pro',Tahoma,Arial,sans-serif;line-height:1.8}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:rgba(9,9,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:18px;height:62px}
+header img{height:40px;width:40px;border-radius:50%}
+nav{display:flex;gap:20px;margin-inline-start:auto;font-size:15px;color:var(--mute)}
+nav a:hover{color:var(--gold2)}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1405;font:inherit;font-weight:700;padding:10px 22px;border-radius:8px;border:0;cursor:pointer}
+.btn.ghost{background:none;color:var(--gold2);border:1px solid var(--gold)}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.hero{padding:56px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center}
+h1{font-size:clamp(30px,5vw,52px);line-height:1.3;margin:0 0 16px;font-weight:700}
+h1 em{font-style:normal;color:var(--gold2)}
+.hero p{color:var(--mute);font-size:18px;max-width:34em;margin:0 0 26px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero img{width:100%;max-width:420px;justify-self:center;border-radius:50%;box-shadow:0 0 90px rgba(217,169,58,.22)}
+section{padding:54px 0}
+h2{font-size:clamp(24px,3.5vw,34px);margin:0 0 8px}
+.sub{color:var(--mute);margin:0 0 26px}
+#advisor{background:var(--panel);border-block:1px solid var(--line)}
+.adv{max-width:720px;margin:auto}
+.bar{height:4px;background:var(--line);border-radius:4px;margin-bottom:22px}
+.bar i{display:block;height:100%;width:0;background:var(--gold);border-radius:4px;transition:width .4s}
+.q{font-size:22px;font-weight:600;margin:0 0 16px}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.opt{background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:16px;font:inherit;text-align:start;cursor:pointer;transition:border-color .2s,transform .2s}
+.opt:hover{border-color:var(--gold);transform:translateY(-2px)}
+.opt small{display:block;color:var(--mute);font-size:13px}
+.back{background:none;border:0;color:var(--mute);font:inherit;margin-top:16px;cursor:pointer}
+.res h3{font-size:22px;margin:0 0 4px;color:var(--gold2)}
+.chips{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap}
+.chip{background:none;border:1px solid var(--line);color:var(--mute);padding:6px 18px;border-radius:30px;font:inherit;cursor:pointer}
+.chip.on{border-color:var(--gold);color:var(--gold2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card .pic{height:150px;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#2b2515,var(--panel) 70%)}
+.card svg{width:78px;height:78px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.card .b{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{margin:0;font-size:18px}
+.card ul{margin:0;padding:0 18px 0 0;color:var(--mute);font-size:14px;flex:1}
+.card .btn{text-align:center;padding:8px;font-size:14px}
+.cat{font-size:12px;color:var(--gold)}
+.res .grid{margin:18px 0}
+footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--mute)}
+footer img{height:64px;border-radius:50%;margin-bottom:10px}
+.dd{position:relative}
+.menu{display:none;position:absolute;top:100%;inset-inline-start:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px;min-width:230px;z-index:6}
+.dd:hover .menu,.dd:focus-within .menu{display:block}
+.menu a{display:block;padding:6px 10px;border-radius:6px;white-space:nowrap;color:var(--ink)}
+.menu a:hover{background:var(--bg)}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.hero img{order:-1;max-width:220px}nav{display:none}header .btn{margin-inline-start:auto}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<img class="lg" src="logo.jpg" alt="SD">
+<nav>
+<a href="#advisor">اختار الجهاز المناسب</a>
+<div class="dd"><a href="#products" data-f="safe">الخزن ▾</a><div class="menu" id="m-safe"></div></div>
+<div class="dd"><a href="#products" data-f="cab">الخزانات ▾</a><div class="menu" id="m-cab"></div></div>
+<a href="#products" data-f="all">كل المنتجات</a>
+<a href="#contact">تواصل معنا</a>
+</nav>
+<a class="btn" id="wa0" href="#">واتساب</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+<div>
+<h1>فلوسك في <em>أمان</em>، وعدّها بدقة</h1>
+<p>ماكينات عد وكشف النقود وخزن حماية للمحلات والشركات والبيوت. جاوب على 3 أسئلة وهنرشحلك الأنسب لشغلك.</p>
+<div class="cta"><a class="btn" href="#advisor">ابدأ الترشيح</a><a class="btn ghost" href="#products">شوف المنتجات</a></div>
+</div>
+<img class="lg" src="logo.jpg" alt="شعار SD">
+</div></section>
+
+<section id="advisor"><div class="wrap adv">
+<h2>إيه اللي محتاجه؟</h2>
+<p class="sub">3 أسئلة سريعة ونرشحلك ماكينة عد أو خزنة.</p>
+<div class="bar"><i id="pb"></i></div>
+<div id="stage"></div>
+</div></section>
+
+<section id="products"><div class="wrap">
+<h2>المنتجات</h2>
+<p class="sub">الأصناف المتاحة حاليًا. اضغط اطلب لتفاصيل والسعر على واتساب.</p>
+<div class="chips" id="chips"></div>
+<div class="grid" id="grid"></div>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+<img class="lg" src="logo.jpg" alt="SD">
+<p>SD لماكينات عد النقود والخزن الحديدية</p>
+<a class="btn" id="wa1" href="#">كلمنا على واتساب</a>
+</div></footer>
+
+<script>
+const PHONE='201036881086';
+
+/* لوجو بديل يظهر لو ملف logo.jpg مش مرفوع */
+const FB=`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23111' stroke='%23d9a93a' stroke-width='3'/><text x='50' y='64' font-size='42' font-weight='700' text-anchor='middle' fill='%23f2d27a' font-family='Arial'>SD</text></svg>`;
+document.querySelectorAll('img.lg').forEach(i=>{
+  i.onerror=()=>{i.onerror=null;i.src=FB};
+  if(i.complete&&!i.naturalWidth)i.src=FB;
+});
+
+const ICO={
+cab:'<svg viewBox="0 0 48 48"><rect x="9" y="5" width="30" height="38" rx="2"/><path d="M24 5v38M20 22v4M28 22v4M13 43v2m22-2v2"/></svg>',
+count:'<svg viewBox="0 0 48 48"><rect x="6" y="18" width="36" height="20" rx="3"/><path d="M12 18v-6h24v6M14 28h20M18 38v4m12-4v4"/></svg>',
+safe:'<svg viewBox="0 0 48 48"><rect x="7" y="8" width="34" height="32" rx="3"/><circle cx="26" cy="24" r="7"/><path d="M26 17v14M19 24h14M12 40v3m24-3v3"/></svg>'};
+
+/* المنتجات: t = count (عد نقود) / safe (خزنة) / cab (خزانة) ، l = مستوى 1-3 */
+const P=[
+{t:'count',l:1,n:'عداد نقود أساسي',f:['عد سريع للأوراق','كشف مزيف بالأشعة فوق البنفسجية','مناسب للمحلات الصغيرة']},
+{t:'count',l:2,n:'عداد نقود بكاشف مزيف متقدم',f:['كشف UV + مغناطيسي + أشعة تحت الحمراء','شاشة عرض واضحة','مناسب للمحلات والصيدليات والسوبر ماركت']},
+{t:'count',l:3,n:'عداد وفارز قيم مختلطة',f:['عد وفرز فئات مختلطة','دقة عالية للأحجام الكبيرة','مناسب للشركات والصرافة والبنوك']},
+{t:'safe',l:1,n:'خزنة منزلية',f:['قفل رقمي ومفتاح طوارئ','حجم صغير يتثبت في الحيطة أو الأرض','مناسبة للبيت والشقق']},
+{t:'safe',l:2,n:'خزنة مكاتب ومحلات',f:['جسم حديد مقاوم للكسر','قفل إلكتروني','مناسبة للمكاتب والمحلات']},
+{t:'safe',l:3,n:'خزنة ثقيلة مقاومة للحريق',f:['حماية عالية ضد السرقة والحريق','قفل مزدوج','مناسبة للشركات والمخازن والبنوك']},
+{t:'safe',l:1,n:'خزنة جدارية مخفية',f:['تتثبت داخل الحيطة','مخفية عن الأنظار','مناسبة للبيوت']},
+{t:'safe',l:2,n:'خزنة ببصمة',f:['فتح بالبصمة','سريعة في الاستخدام','مناسبة للمكاتب والمحلات']},
+{t:'cab',l:1,n:'خزانة مفاتيح',f:['تنظيم وحماية المفاتيح','قفل بمفتاح أو رقمي','للمكاتب والفنادق والعمارات']},
+{t:'cab',l:2,n:'خزانة ملفات حديد',f:['أدراج وأرفف حديد','قفل مركزي','للمكاتب والأرشيف']},
+{t:'cab',l:3,n:'خزانة لوكر للموظفين',f:['أبواب متعددة بقفل لكل باب','حديد متين','للمصانع والشركات والنوادي']}
+];
+
+const wa=m=>`https://wa.me/${PHONE}?text=${encodeURIComponent(m)}`;
+['wa0','wa1'].forEach(i=>document.getElementById(i).href=wa('السلام عليكم، عايز استفسر عن منتجاتكم'));
+
+const LBL={count:'ماكينات عد نقود',safe:'خزن حماية',cab:'خزانات'};
+const card=p=>`<div class="card"><div class="pic">${ICO[p.t]}</div><div class="b"><span class="cat">${LBL[p.t]}</span><h3>${p.n}</h3><ul>${p.f.map(x=>`<li>${x}</li>`).join('')}</ul><a class="btn" href="${wa('عايز أطلب: '+p.n)}">اطلب / اسأل عن السعر</a></div></div>`;
+
+let flt='all';
+function grid(){document.getElementById('grid').innerHTML=P.filter(p=>flt=='all'||p.t==flt).map(card).join('')}
+document.getElementById('chips').innerHTML=[['all','الكل'],['count','ماكينات عد النقود'],['safe','الخزن'],['cab','الخزانات']].map(([k,v])=>`<button class="chip${k=='all'?' on':''}" data-k="${k}">${v}</button>`).join('');
+function setF(k){flt=k;[...document.getElementById('chips').children].forEach(c=>c.classList.toggle('on',c.dataset.k==k));grid()}
+document.getElementById('chips').onclick=e=>{const k=e.target.dataset.k;if(k)setF(k)};
+grid();
+['safe','cab'].forEach(k=>{document.getElementById('m-'+k).innerHTML=`<a href="#products" data-f="${k}"><b>عرض الكل</b></a>`+P.filter(p=>p.t==k).map(p=>`<a href="#products" data-f="${k}">${p.n}</a>`).join('')});
+document.querySelector('nav').onclick=e=>{const a=e.target.closest('[data-f]');if(a)setF(a.dataset.f)};
+
+/* أسئلة الترشيح */
+const Q=[
+{q:'إيه مجال شغلك أو مكان الاستخدام؟',o:[['بيت أو فيلا','home',1],['محل / صيدلية / سوبر ماركت','shop',2],['مكتب أو شركة','office',2],['صرافة / بنك / شركة كبيرة','big',3]]},
+{q:'محتاج إيه بالظبط؟',o:[['ماكينة عد نقود','count'],['خزنة حماية','safe'],['الاتنين','both']]},
+{q:'حجم الشغل أو قيمة الفلوس عندك؟',o:[['صغير','قليل: عد بسيط أو مبالغ محدودة',1],['متوسط','عد يومي ومبالغ معقولة',2],['كبير','مبالغ كبيرة وحركة كتير',3]]}];
+let step=0,A=[];
+const st=document.getElementById('stage'),pb=document.getElementById('pb');
+function show(){
+pb.style.width=(step/3*100)+'%';
+if(step>=3)return result();
+const x=Q[step];
+st.innerHTML=`<p class="q">${x.q}</p><div class="opts">${x.o.map((o,i)=>`<button class="opt" data-i="${i}">${o[0]}${step==2?`<small>${o[1]}</small>`:''}</button>`).join('')}</div>${step?'<button class="back" id="bk">رجوع</button>':''}`;
+st.querySelector('.opts').onclick=e=>{const b=e.target.closest('.opt');if(!b)return;A[step]=x.o[+b.dataset.i];step++;show()};
+const bk=document.getElementById('bk');if(bk)bk.onclick=()=>{step--;show()};
+}
+function result(){
+const lvl=Math.max(A[0][2],A[2][2]),need=A[1][1];
+const pick=P.filter(p=>p.t!='cab'&&p.l==lvl&&(need=='both'||p.t==need));
+const msg=`مجال الشغل: ${A[0][0]} | المطلوب: ${A[1][0]} | الحجم: ${A[2][0]}. محتاج ترشيح.`;
+st.innerHTML=`<div class="res"><h3>رشحنالك</h3><p class="sub">بناءً على: ${A[0][0]}، ${A[1][0]}، حجم ${A[2][0]}.</p><div class="grid">${pick.map(card).join('')}</div><a class="btn" href="${wa(msg)}">ابعت اختياراتك على واتساب</a> <button class="back" id="rs">ابدأ من جديد</button></div>`;
+document.getElementById('rs').onclick=()=>{step=0;A=[];show()};
+}
+show();
+</script>
+</body>
+</html>
