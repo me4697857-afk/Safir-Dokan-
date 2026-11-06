@@ -46,7 +46,7 @@ h2{font-size:clamp(24px,3.5vw,34px);margin:0 0 8px}
 .chip.on{border-color:var(--gold);color:var(--gold2)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
-.card .pic{height:150px;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#2b2515,var(--panel) 70%)}
+.card .pic{height:220px;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#2b2515,var(--panel) 70%)}
 .card svg{width:78px;height:78px;stroke:var(--gold);fill:none;stroke-width:1.5}
 .card .b{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
 .card h3{margin:0;font-size:18px}
@@ -126,6 +126,7 @@ safe:'<svg viewBox="0 0 48 48"><rect x="7" y="8" width="34" height="32" rx="3"/>
 
 /* المنتجات: t = count (عد نقود) / safe (خزنة) / cab (خزانة) ، l = مستوى 1-3 */
 const P=[
+{t:'safe',l:2,n:'خزنة كراون SB16 – ديجيتال أو 2 كالون',img:'crown-sb16.jpg.jpeg',f:['مقاومة للحريق لمدة ساعة عند 1200° مئوية وفق المواصفات المعلنة','قفل ديجيتال مع مفتاحين تأمين ومفتاح طوارئ عند نسيان كلمة المرور','متاحة أيضًا بنظام 2 كالون','رف داخلي متحرك ووزن 35 كجم','الأبعاد: ارتفاع 32 × عرض 42 × عمق 32 سم','الألوان: أبيض وزيتي']},
 {t:'count',l:1,n:'عداد نقود أساسي',f:['عد سريع للأوراق','كشف مزيف بالأشعة فوق البنفسجية','مناسب للمحلات الصغيرة']},
 {t:'count',l:2,n:'عداد نقود بكاشف مزيف متقدم',f:['كشف UV + مغناطيسي + أشعة تحت الحمراء','شاشة عرض واضحة','مناسب للمحلات والصيدليات والسوبر ماركت']},
 {t:'count',l:3,n:'عداد وفارز قيم مختلطة',f:['عد وفرز فئات مختلطة','دقة عالية للأحجام الكبيرة','مناسب للشركات والصرافة والبنوك']},
@@ -143,7 +144,7 @@ const wa=m=>`https://wa.me/${PHONE}?text=${encodeURIComponent(m)}`;
 ['wa0','wa1'].forEach(i=>document.getElementById(i).href=wa('السلام عليكم، عايز استفسر عن منتجاتكم'));
 
 const LBL={count:'ماكينات عد نقود',safe:'خزن حماية',cab:'خزانات'};
-const card=p=>`<div class="card"><div class="pic">${ICO[p.t]}</div><div class="b"><span class="cat">${LBL[p.t]}</span><h3>${p.n}</h3><ul>${p.f.map(x=>`<li>${x}</li>`).join('')}</ul><a class="btn" href="${wa('عايز أطلب: '+p.n)}">اطلب / اسأل عن السعر</a></div></div>`;
+const card=p=>`<div class="card"><div class="pic">${p.img?`<img src="${p.img}" alt="${p.n}" loading="lazy" style="width:100%;height:100%;object-fit:contain">`:ICO[p.t]}</div><div class="b"><span class="cat">${LBL[p.t]}</span><h3>${p.n}</h3><ul>${p.f.map(x=>`<li>${x}</li>`).join('')}</ul><a class="btn" href="${wa('عايز أطلب: '+p.n)}">اطلب / اسأل عن السعر</a></div></div>`;
 
 let flt='all';
 function grid(){document.getElementById('grid').innerHTML=P.filter(p=>flt=='all'||p.t==flt).map(card).join('')}
